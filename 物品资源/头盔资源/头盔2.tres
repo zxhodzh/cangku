@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="物品资源类" load_steps=3 format=3 uid="uid://erpiwu2mis40"]
+
+[ext_resource type="Script" uid="uid://cbmwkrg72atd0" path="res://脚本/物品资源脚本.gd" id="1_58wjk"]
+[ext_resource type="Texture2D" uid="uid://b13lnq1pt1ty3" path="res://素材/装备图片/头盔/2664-1.png" id="2_anc1o"]
+
+[resource]
+script = ExtResource("1_58wjk")
+"列数" = 2
+"行数" = 2
+"物品类型" = 1
+"物品纹理" = ExtResource("2_anc1o")
+metadata/_custom_type_script = "uid://cbmwkrg72atd0"

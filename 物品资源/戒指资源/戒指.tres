@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="物品资源类" load_steps=3 format=3 uid="uid://cldk5rxrw65x0"]
+
+[ext_resource type="Script" uid="uid://cbmwkrg72atd0" path="res://脚本/物品资源脚本.gd" id="1_sisul"]
+[ext_resource type="Texture2D" uid="uid://dt76vy81wxthu" path="res://素材/装备图片/戒指/2756-1.png" id="2_3sldn"]
+
+[resource]
+script = ExtResource("1_sisul")
+"列数" = 1
+"行数" = 1
+"物品类型" = 9
+"物品纹理" = ExtResource("2_3sldn")
+metadata/_custom_type_script = "uid://cbmwkrg72atd0"

@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhlmqoqvlxq5g"]
+
+[ext_resource type="Script" uid="uid://5rlwf75abkem" path="res://脚本/物品.gd" id="1_wieq2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wieq2"]
+size = Vector2(0, 0)
+
+[node name="物品" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_wieq2")
+
+[node name="图片" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 3
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 222
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_wieq2")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

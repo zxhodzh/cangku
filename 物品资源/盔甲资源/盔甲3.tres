@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="物品资源类" load_steps=3 format=3 uid="uid://wxpw5vvtlphm"]
+
+[ext_resource type="Script" uid="uid://cbmwkrg72atd0" path="res://脚本/物品资源脚本.gd" id="1_g3y0u"]
+[ext_resource type="Texture2D" uid="uid://bb1irhhumnk10" path="res://素材/装备图片/盔甲/2686-1.png" id="2_6b62a"]
+
+[resource]
+script = ExtResource("1_g3y0u")
+"物品品质" = 2
+"列数" = 2
+"行数" = 3
+"物品类型" = 2
+"物品纹理" = ExtResource("2_6b62a")
+"物品名称" = "粗布麻衣"
+"物品描述" = "比麻草一副略好"
+"物品属性" = {
+"攻击力": 0,
+"耐久度": 100,
+"防御力": 0
+}
+metadata/_custom_type_script = "uid://cbmwkrg72atd0"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="物品资源类" load_steps=3 format=3 uid="uid://bhkxb6s6kqw3k"]
+
+[ext_resource type="Script" uid="uid://cbmwkrg72atd0" path="res://脚本/物品资源脚本.gd" id="1_ow1c2"]
+[ext_resource type="Texture2D" uid="uid://b6i8liwneton1" path="res://素材/装备图片/武器/锤/2655-1.png" id="2_cv7o6"]
+
+[resource]
+script = ExtResource("1_ow1c2")
+"列数" = 2
+"行数" = 3
+"物品类型" = 12
+"物品纹理" = ExtResource("2_cv7o6")
+metadata/_custom_type_script = "uid://cbmwkrg72atd0"

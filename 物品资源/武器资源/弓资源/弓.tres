@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="物品资源类" load_steps=3 format=3 uid="uid://bu3f2155pm2jf"]
+
+[ext_resource type="Script" uid="uid://cbmwkrg72atd0" path="res://脚本/物品资源脚本.gd" id="1_aq2nc"]
+[ext_resource type="Texture2D" uid="uid://dt23j3jaufqs3" path="res://素材/装备图片/武器/弓/2465-1.png" id="2_11evc"]
+
+[resource]
+script = ExtResource("1_aq2nc")
+"列数" = 2
+"行数" = 3
+"物品类型" = 16
+"物品纹理" = ExtResource("2_11evc")
+metadata/_custom_type_script = "uid://cbmwkrg72atd0"

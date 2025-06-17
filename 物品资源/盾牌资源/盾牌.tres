@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="物品资源类" load_steps=3 format=3 uid="uid://07hltx8bo8yp"]
+
+[ext_resource type="Script" uid="uid://cbmwkrg72atd0" path="res://脚本/物品资源脚本.gd" id="1_46h2i"]
+[ext_resource type="Texture2D" uid="uid://dl6wifp15n5o4" path="res://素材/装备图片/盾牌/2705-1.png" id="2_7g2tr"]
+
+[resource]
+script = ExtResource("1_46h2i")
+"列数" = 2
+"行数" = 3
+"物品类型" = 5
+"物品纹理" = ExtResource("2_7g2tr")
+metadata/_custom_type_script = "uid://cbmwkrg72atd0"

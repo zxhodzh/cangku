@@ -1,0 +1,215 @@
+[gd_scene load_steps=20 format=3 uid="uid://eanana52gj1d"]
+
+[ext_resource type="PackedScene" uid="uid://b4v08f3i48exq" path="res://场景/仓库容器.tscn" id="1_atwcx"]
+[ext_resource type="Script" uid="uid://ddu6rvn3a53vp" path="res://脚本/测试场景.gd" id="1_iq2oa"]
+[ext_resource type="Texture2D" uid="uid://c8w7qykevq54f" path="res://素材/背景/196-1.png" id="2_bn311"]
+[ext_resource type="PackedScene" uid="uid://kfxeedcxiw50" path="res://场景/装备槽.tscn" id="2_lpcwe"]
+[ext_resource type="Texture2D" uid="uid://cfu20b4ponkgk" path="res://素材/背景/757-1.png" id="2_p4712"]
+[ext_resource type="Texture2D" uid="uid://c7lbfa286vjqn" path="res://素材/背景/803-1.png" id="4_g3nao"]
+[ext_resource type="Texture2D" uid="uid://drw6q4qjcuy2v" path="res://素材/装备槽背景/791-1-export.png" id="4_h613h"]
+[ext_resource type="Texture2D" uid="uid://ttennuglimo5" path="res://素材/背景/55-1.png" id="5_ofq2r"]
+[ext_resource type="Texture2D" uid="uid://kl7nm60lhxxo" path="res://素材/背景/57-1.png" id="6_b0ukm"]
+[ext_resource type="Texture2D" uid="uid://c5y1vbrgao3j3" path="res://素材/装备槽背景/791-3-export.png" id="7_wxyuv"]
+[ext_resource type="Texture2D" uid="uid://uopmaqflobpt" path="res://素材/装备槽背景/791-2-export.png" id="8_wxyuv"]
+[ext_resource type="Texture2D" uid="uid://cxqbe8hbm7mqj" path="res://素材/装备槽背景/791-6-export.png" id="9_2umac"]
+[ext_resource type="Texture2D" uid="uid://deokh2ckaw1yl" path="res://素材/装备槽背景/791-4-export.png" id="9_nboa4"]
+[ext_resource type="Texture2D" uid="uid://m13h2oulrmnn" path="res://素材/装备槽背景/791-5-export.png" id="10_p4712"]
+[ext_resource type="Texture2D" uid="uid://b0tcpy40mgyl5" path="res://素材/装备槽背景/791-7-export.png" id="11_p4712"]
+[ext_resource type="AudioStream" uid="uid://dnfgbtpent8n2" path="res://素材/音效/武士刀皮卡(Katana_pickup)_爱给网_aigei_com.mp3" id="13_jjxjj"]
+[ext_resource type="Texture2D" uid="uid://bwderb4ognop3" path="res://素材/背景/631-1.png" id="17_038ob"]
+[ext_resource type="Texture2D" uid="uid://b5p8lak4lkqw8" path="res://素材/背景/630-1.png" id="18_5vvmn"]
+[ext_resource type="PackedScene" uid="uid://y01y8ekptj58" path="res://场景/物品提示框.tscn" id="19_5vvmn"]
+
+[node name="测试场景" type="Control"]
+process_mode = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_iq2oa")
+
+[node name="196-1" type="Sprite2D" parent="."]
+position = Vector2(576, 325.5)
+scale = Vector2(5.44076, 3.90964)
+texture = ExtResource("2_bn311")
+
+[node name="仓库" type="Node2D" parent="."]
+
+[node name="仓库" parent="仓库" instance=ExtResource("1_atwcx")]
+offset_left = 107.0
+offset_top = 79.0
+offset_right = 715.0
+offset_bottom = 559.0
+"仓库列数" = 19
+"仓库行数" = 15
+"允许存放的物品类型" = Array[int]([0])
+
+[node name="背包" type="Node2D" parent="."]
+position = Vector2(942, 530)
+
+[node name="803-1" type="Sprite2D" parent="背包"]
+scale = Vector2(0.615, 0.75)
+texture = ExtResource("4_g3nao")
+
+[node name="背包" parent="背包" instance=ExtResource("1_atwcx")]
+offset_left = -144.0
+offset_top = -93.0
+offset_right = 144.0
+offset_bottom = 67.0
+"is_背包" = true
+"仓库列数" = 9
+"仓库行数" = 5
+"允许存放的物品类型" = Array[int]([0])
+
+[node name="装备槽" type="Node2D" parent="背包"]
+position = Vector2(-947, -510)
+
+[node name="791-1" type="Sprite2D" parent="背包/装备槽"]
+position = Vector2(947, 206)
+scale = Vector2(1.23, 1.07)
+texture = ExtResource("2_p4712")
+
+[node name="头盔装备槽" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 913.0
+offset_top = 55.0
+offset_right = 977.0
+offset_bottom = 119.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("8_wxyuv")
+"仓库列数" = 2
+"仓库行数" = 2
+
+[node name="盔甲装备槽" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 913.0
+offset_top = 122.0
+offset_right = 977.0
+offset_bottom = 218.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("4_h613h")
+"仓库列数" = 2
+"仓库行数" = 3
+"允许存放的物品类型" = Array[int]([2])
+
+[node name="腰带装备槽" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 913.0
+offset_top = 222.0
+offset_right = 977.0
+offset_bottom = 254.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("9_nboa4")
+"仓库列数" = 2
+"仓库行数" = 1
+"允许存放的物品类型" = Array[int]([3])
+
+[node name="靴子装备槽" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 913.0
+offset_top = 276.0
+offset_right = 977.0
+offset_bottom = 340.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("7_wxyuv")
+"仓库列数" = 2
+"仓库行数" = 2
+"允许存放的物品类型" = Array[int]([4])
+
+[node name="武器装备槽" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 845.0
+offset_top = 158.0
+offset_right = 909.0
+offset_bottom = 254.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("9_2umac")
+"仓库列数" = 2
+"仓库行数" = 3
+"允许存放的物品类型" = Array[int]([6, 12, 16])
+
+[node name="盾牌装备槽" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 982.0
+offset_top = 157.0
+offset_right = 1046.0
+offset_bottom = 253.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("9_2umac")
+"仓库列数" = 2
+"仓库行数" = 3
+"允许存放的物品类型" = Array[int]([5])
+
+[node name="护腕装备槽" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 845.0
+offset_top = 91.0
+offset_right = 909.0
+offset_bottom = 155.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("10_p4712")
+"仓库列数" = 2
+"仓库行数" = 2
+"允许存放的物品类型" = Array[int]([7])
+
+[node name="项链装备槽" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 982.0
+offset_top = 89.0
+offset_right = 1046.0
+offset_bottom = 153.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("10_p4712")
+"仓库列数" = 2
+"仓库行数" = 2
+"允许存放的物品类型" = Array[int]([10])
+
+[node name="戒指装备槽" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 845.0
+offset_top = 255.0
+offset_right = 877.0
+offset_bottom = 287.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("11_p4712")
+"仓库列数" = 1
+"仓库行数" = 1
+"允许存放的物品类型" = Array[int]([9])
+
+[node name="戒指装备槽2" parent="背包/装备槽" instance=ExtResource("2_lpcwe")]
+offset_left = 1014.0
+offset_top = 254.0
+offset_right = 1046.0
+offset_bottom = 286.0
+"有效颜色" = Color(0, 0.52549, 0, 0.341176)
+"无效颜色" = Color(0.580392, 0, 0, 0.458824)
+"背景图片" = ExtResource("11_p4712")
+"仓库列数" = 1
+"仓库行数" = 1
+"允许存放的物品类型" = Array[int]([9])
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 723.0
+offset_top = 526.0
+offset_right = 745.0
+offset_bottom = 548.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_ofq2r")
+texture_pressed = ExtResource("6_b0ukm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_jjxjj")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1096.0
+offset_top = 22.0
+offset_right = 1120.0
+offset_bottom = 46.0
+scale = Vector2(1.3, 1.3)
+texture_normal = ExtResource("17_038ob")
+texture_pressed = ExtResource("18_5vvmn")
+
+[node name="物品提示框" parent="." groups=["物品提示框"] instance=ExtResource("19_5vvmn")]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 100.0

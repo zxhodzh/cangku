@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="物品资源类" load_steps=3 format=3 uid="uid://7fshuhq65hl7"]
+
+[ext_resource type="Script" uid="uid://cbmwkrg72atd0" path="res://脚本/物品资源脚本.gd" id="1_nr23n"]
+[ext_resource type="Texture2D" uid="uid://hg33rbvj36yu" path="res://素材/装备图片/护腕/2772-1.png" id="2_hd2fb"]
+
+[resource]
+script = ExtResource("1_nr23n")
+"列数" = 2
+"行数" = 2
+"物品类型" = 7
+"物品纹理" = ExtResource("2_hd2fb")
+metadata/_custom_type_script = "uid://cbmwkrg72atd0"

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnmh6bygmxahe"]
+
+[ext_resource type="Script" uid="uid://bpiqndn3at0n" path="res://脚本/主场景.gd" id="1_r1b65"]
+[ext_resource type="PackedScene" uid="uid://eanana52gj1d" path="res://场景/测试场景.tscn" id="2_r1b65"]
+
+[node name="主场景" type="Node2D"]
+script = ExtResource("1_r1b65")
+
+[node name="Button" type="Label" parent="."]
+offset_left = 249.0
+offset_top = 214.0
+offset_right = 978.0
+offset_bottom = 567.0
+theme_override_font_sizes/font_size = 64
+text = "C键开关仓库
+ctrl + 左键 快速转移
+"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GlobalUI" parent="CanvasLayer" instance=ExtResource("2_r1b65")]
